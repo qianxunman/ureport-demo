@@ -8,20 +8,20 @@ import com.bstek.ureport.definition.datasource.BuildinDatasource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-// public class TestBuildinDatasource implements BuildinDatasource {
-//     @Autowired
-//     private DataSource datasource;
-//     public String name() {
-//         return "内置数据源DENO";
-//     }
-//     public Connection getConnection() {
-//         try {
-//             return datasource.getConnection();
-//         } catch (SQLException e) {
-//             throw new RuntimeException(e);
-//         }
-//     }
-//     public void setDatasource(DataSource datasource) {
-//         this.datasource = datasource;
-//     }
-// }
+public class TestBuildinDatasource implements BuildinDatasource {
+    @Autowired
+    private DataSource datasource1;
+    public String name() {
+        return "内置数据源DENO";
+    }
+    public Connection getConnection() {
+        try {
+            return datasource1.getConnection();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public void setDatasource(DataSource datasource) {
+        this.datasource1 = datasource;
+    }
+}
