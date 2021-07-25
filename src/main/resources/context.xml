@@ -11,7 +11,7 @@
     </bean>
     <bean id="testBuildinDatasource" class="cn.wilmar.ureport.report.jpa.TestBuildinDatasource"></bean>
 
-    <bean id="datasource1" class="org.apache.commons.dbcp2.BasicDatasource">
+    <bean id="datasource" class="org.apache.commons.dbcp2.BasicDatasource">
         <property name="url" value="jdbc:mysq://localhost:3306/doradosample?useUnicode=truesamp;characterEncoding=UTF-8" />
         <property name="driverclassName" value="com.mysql.jdbc.Driver" />
         <property name="username" value="root" />
