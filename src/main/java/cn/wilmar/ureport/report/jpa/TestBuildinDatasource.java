@@ -1,5 +1,13 @@
 package cn.wilmar.ureport.report.jpa;
 import java.sql.Connection;
+import java.sql.SQLException;
+import javax.sql.DataSource;
+
+import com.bstek.ureport.definition.datasource.BuildinDatasource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 public class TestBuildinDatasource implements BuildinDatasource {
     private Datasource datasource;
     public String name() {
