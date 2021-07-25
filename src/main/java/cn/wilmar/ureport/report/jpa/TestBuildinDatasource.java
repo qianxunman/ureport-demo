@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 public class TestBuildinDatasource implements BuildinDatasource {
     @Autowired
-    private Datasource datasource;
+    private DataSource datasource;
     public String name() {
         return "内置数据源DENO";
     }
