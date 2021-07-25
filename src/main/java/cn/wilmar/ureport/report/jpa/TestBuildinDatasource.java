@@ -21,7 +21,7 @@ public class TestBuildinDatasource implements BuildinDatasource {
             throw new RuntimeException(e);
         }
     }
-    public void setDatasource(Datasource datasource) {
+    public void setDatasource(DataSource datasource) {
         this.datasource = datasource;
     }
 }
