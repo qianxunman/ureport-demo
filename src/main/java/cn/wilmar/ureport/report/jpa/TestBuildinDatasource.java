@@ -16,7 +16,7 @@ public class TestBuildinDatasource implements BuildinDatasource {
     }
     public Connection getConnection() {
         try {
-            return dataSource.getConnection();
+            return datasource.getConnection();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
