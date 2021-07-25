@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 public class TestBuildinDatasource implements BuildinDatasource {
+    @Autowired
     private Datasource datasource;
     public String name() {
         return "内置数据源DENO";
@@ -16,7 +17,7 @@ public class TestBuildinDatasource implements BuildinDatasource {
     public Connection getConnection() {
         try {
             return dataSource.getConnection();
-        } catch (sQLException e) {
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
