@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 public class TestBuildinDatasource implements BuildinDatasource {
-    @Autowired
     private DataSource datasource1;
     public String name() {
         return "内置数据源DENO";
