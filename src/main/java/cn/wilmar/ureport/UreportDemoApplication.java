@@ -14,32 +14,32 @@ import org.springframework.web.servlet.HandlerExceptionResolver;
 /**
  * @author yinguowei
  */
-@ImportResource("classpath:context.xml")
-@EnableJpaAuditing
-@SpringBootApplication
-public class UreportDemoApplication {
-    Logger logger = LoggerFactory.getLogger(UreportDemoApplication.class);
+// @ImportResource("classpath:context.xml")
+// @EnableJpaAuditing
+// @SpringBootApplication
+// public class UreportDemoApplication {
+//     Logger logger = LoggerFactory.getLogger(UreportDemoApplication.class);
 
-    public static void main(String[] args) {
-        SpringApplication.run(UreportDemoApplication.class, args);
-    }
-
-
-    /**
-     * 异常处理器控制将异常转发送给 Sentry
-     */
-    @Bean
-    public HandlerExceptionResolver sentryExceptionResolver() {
-        return new io.sentry.spring.SentryExceptionResolver();
-    }
-
-    /**
-     * 监听器使 Sentry 可以包含 HTTP 请求信息
-     */
-    @Bean
-    public ServletContextInitializer sentryServletContextInitializer() {
-        return new SentryServletContextInitializer();
-    }
+//     public static void main(String[] args) {
+//         SpringApplication.run(UreportDemoApplication.class, args);
+//     }
 
 
-}
+//     /**
+//      * 异常处理器控制将异常转发送给 Sentry
+//      */
+//     @Bean
+//     public HandlerExceptionResolver sentryExceptionResolver() {
+//         return new io.sentry.spring.SentryExceptionResolver();
+//     }
+
+//     /**
+//      * 监听器使 Sentry 可以包含 HTTP 请求信息
+//      */
+//     @Bean
+//     public ServletContextInitializer sentryServletContextInitializer() {
+//         return new SentryServletContextInitializer();
+//     }
+
+
+// }
