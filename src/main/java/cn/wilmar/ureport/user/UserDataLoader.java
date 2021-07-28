@@ -28,8 +28,8 @@ public class UserDataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) {
         logger.debug("UserDataLoader.run");
-        Stream.of("Jojo", "Jon", "James", "Jack", "Jacky", "Jean", "Justin", "Judy", "Julia", "Jason", "Jane", "Joseph", "Jerry", "Jenny")
-                .forEach(name -> userRepository.save(new User(name, name.toLowerCase() + "@sample.com", new Date())));
-        userRepository.findAll().forEach(System.out::println);
+        // Stream.of("Jojo", "Jon", "James", "Jack", "Jacky", "Jean", "Justin", "Judy", "Julia", "Jason", "Jane", "Joseph", "Jerry", "Jenny")
+        //         .forEach(name -> userRepository.save(new User(name, name.toLowerCase() + "@sample.com", new Date())));
+        // userRepository.findAll().forEach(System.out::println);
     }
 }
